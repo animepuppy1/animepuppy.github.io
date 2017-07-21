@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head
+     <title>LangTrans</title>
+</head>
+<body>
+
+  <div id = "myDiv">
+    <input type "text" name= "baseinput" id="myText">
+    <input type= "button" value="submit" onclick="langTrans()">
+  </div>
+
+  <p id="food"></p>
+
+  <script type="text/javascript">
+
+      function langTrans(){
+        instring = document.getElementById("myText").value;
+        var outstring="";
+
+        for (var i=0; i<instring.length; i+=1){
+          if (instring.charAt(i)=="a"){
+            outstring +="uba";
+          }
+          else   if (instring.charAt(i)=="e"){
+              outstring +="ube";
+            }
+            else   if (instring.charAt(i)=="i"){
+                outstring +="ubi";
+              }
+              else   if (instring.charAt(i)=="o"){
+                  outstring +="ubo";
+                }
+                else   if (instring.charAt(i)=="u"){
+                    outstring +="ubu";
+                  }
+          else{
+            outstring += instring.charAt(i);
+          }
+        }
+
+        document.getElementById("food").innerHTML = outstring;
+        return outstring;
+      }
+
+
+</script>
+
+</body>
+</html>
